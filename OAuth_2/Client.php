@@ -161,7 +161,7 @@ class Client
             curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
             //curl_setopt($ch, CURLOPT_CAPATH, $this->certificate_file);
             //curl_setopt($ch, CURLOPT_CAPATH, "/Library/WebServer/Documents/OAuth_2/Certificate/");
-            curl_setopt($ch, CURLOPT_CAINFO, $this->certificate_file);
+            curl_setopt($ch, CURLOPT_CAINFO, __dir__ ."\Certificate\cacert.pem");
          //curl_setopt($ch, CURLOPT_CAINFO, "/Library/WebServer/Documents/OAuth_2/Certificate/VeriSignClass3PublicPrimaryCertificationAuthority-G5.pem");
       } else {
             // throw exception
